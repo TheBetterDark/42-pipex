@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/17 21:29:11 by muabdi            #+#    #+#              #
-#    Updated: 2024/06/17 21:53:26 by muabdi           ###   ########.fr        #
+#    Updated: 2024/06/25 17:07:34 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ LOG_DIR = ./logs
 
 OUTPUT_LEAKS = $(LOG_DIR)/valgrind.log
 
-SRCS = $(shell find $(SRC_DIR) -name '*.c')
+SRCS = $(SRC_DIR)/pipex.c $(SRC_DIR)/utils.c
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)

@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/17 21:29:11 by muabdi            #+#    #+#              #
-#    Updated: 2024/06/25 17:07:34 by muabdi           ###   ########.fr        #
+#    Updated: 2024/06/28 15:34:12 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,5 +68,9 @@ fclean:
 re: fclean all
 	@echo "${GREEN}Target 're' completed.${NC}"
 
+libs:
+	@echo "${YELLOW}Updating submodules...${NC}"
+	@git submodule update --init --recursive --remote
+	@echo "${GREEN}Submodules updated.${NC}"
 
-.PHONY: all clean fclean re leaks test
+.PHONY: all clean fclean re libs
